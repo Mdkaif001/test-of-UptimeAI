@@ -1,0 +1,167 @@
+/* GitHub Color System & Global Styles */
+:root {
+    --gh-bg: #ffffff;
+    --gh-text-primary: #24292f;
+    --gh-text-secondary: #57606a;
+    --gh-link: #0969da;
+    --gh-border: #d0d7de;
+    --gh-border-secondary: #d8dee4;
+    --gh-header-bg: #24292f;
+    --gh-header-text: #ffffff;
+    --gh-btn-bg: #f6f8fa;
+    --gh-btn-border: rgba(27, 31, 35, 0.15);
+    --gh-btn-hover: #f3f4f6;
+    --gh-btn-text: #24292f;
+    --gh-contribution-green-0: #ebedf0;
+    --gh-contribution-green-1: #9be9a8;
+    --gh-contribution-green-2: #40c463;
+    --gh-contribution-green-3: #30a14e;
+    --gh-contribution-green-4: #216e39;
+    --gh-font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+body {
+    margin: 0;
+    font-family: var(--gh-font-stack);
+    background-color: var(--gh-bg);
+    color: var(--gh-text-primary);
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: var(--gh-link);
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    /* GitHub uses slightly wider padding on larger screens */
+
+    @media (max-width: 768px) {
+        padding: 0 16px;
+    }
+}
+
+/* Utility classes */
+.d-flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.gap-1 {
+    gap: 4px;
+}
+
+.gap-2 {
+    gap: 8px;
+}
+
+.gap-3 {
+    gap: 16px;
+}
+
+.mt-2 {
+    margin-top: 8px;
+}
+
+.mt-3 {
+    margin-top: 16px;
+}
+
+.mt-4 {
+    margin-top: 24px;
+}
+
+.mt-5 {
+    margin-top: 32px;
+}
+
+.mt-8 {
+    margin-top: 65px;
+}
+
+.mb-2 {
+    margin-bottom: 8px;
+}
+
+.mb-3 {
+    margin-bottom: 16px;
+}
+
+.py-4 {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.text-muted {
+    color: var(--gh-text-secondary);
+}
+
+.fw-bold {
+    font-weight: 600;
+}
+
+.small {
+    font-size: 12px;
+}
+
+/* Button Styles matching GitHub */
+.btn {
+    display: inline-block;
+    padding: 5px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid;
+    border-radius: 6px;
+    appearance: none;
+}
+
+.btn-default {
+    color: var(--gh-btn-text);
+    background-color: var(--gh-btn-bg);
+    border-color: var(--gh-btn-border);
+    box-shadow: 0 1px 0 rgba(27, 31, 35, 0.04);
+    transition: 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+    transition-property: color, background-color, border-color;
+
+    &:hover {
+        background-color: var(--gh-btn-hover);
+        border-color: rgba(27, 31, 35, 0.15);
+        transition-duration: 0.1s;
+    }
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
